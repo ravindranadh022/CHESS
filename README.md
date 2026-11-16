@@ -504,3 +504,78 @@ Memorize these five main steps:
 These are the five major steps explicitly listed in your reference document.
 
 You have now completed the entire practical successfully! 🎯
+
+
+
+
+
+
+
+
+JavaBuild
+Two build steps invoke top
+Maven home clean
+Maven home install
+Post build actions
+Archive the artifacts
+**/*
+Build other projects
+Name
+Trigger only if build is stable
+
+
+
+Test
+Description 
+Environment 
+Delete workspace before build starts
+Build steps 2 copy artifacts from another project 
+Name build
+Check box stable build only
+**/*
+Invoke top level
+Maven home test
+Post build actions
+Archive the artifacts
+**/*
+
+
+Pipeline
+Name
+Layout
+Select initial job
+
+
+For web test
+In post build actions
+Build other projects 
+Web deploy
+Trigger only if build is stable
+
+
+Web deploy
+Description
+Enivronment
+build steps copy artifacts from another project
+name test
+Post-build Actions
+Define what happens after a build completes, like sending notifications, archiving artifacts, or triggering other jobs.
+Deploy war/ear to a container
+Delete
+WAR/EAR files
+?
+**/*.war
+Context path
+?
+Webpath
+Containers
+Tomcat 9.x Remote
+Delete
+Credentials
+
+admin/******
+Add
+Tomcat URL
+?
+http://localhost:8083/
+Advanced
